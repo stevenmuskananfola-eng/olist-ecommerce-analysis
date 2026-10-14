@@ -10,10 +10,10 @@
 
 ## 👋 About Me
 
-[ISI SENDIRI, 2–3 kalimat. Contoh struktur: siapa kamu → target role → apa yang kamu suka dari data.]
+Hey there 👋 ! I'm Steven and this repository houses my profile description.
 
 **Target role:** Data Analyst / BI Analyst
-**Skills & tools:** [isi sesuai yang benar-benar dikuasai, mis. Excel, Tableau, SQL, Python]
+**Skills & tools:** Excel, Tableau, SQL, Data Visualization
 **Contact:** [LinkedIn] · [Email]
 
 ---
