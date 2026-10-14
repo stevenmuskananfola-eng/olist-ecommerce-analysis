@@ -14,7 +14,9 @@ Hey there 👋 ! I'm Steven and this repository houses my profile description.
 
 **Target role:** Data Analyst / BI Analyst
 **Skills & tools:** Excel, Tableau, SQL, Data Visualization
-**Contact:** [LinkedIn] · [Email]
+**Contact:** [www.linkedin.com/in/steven-bastian-peterson-532099378
+
+] · [stevenbastianpeterson@gmail.com]
 
 ---
 
