@@ -89,7 +89,7 @@ Average payment value rises from **R$112 (1 installment) to R$410 (10 installmen
 
 ### Supporting observations
 - **Health & Beauty** is the top category by revenue (about R$1.41M).
-- Orders peak on **Monday (~15.5K)** and are lowest on **Saturday (~10.4K, 33% lower)**, so weekend-only promotions could lift quiet days.
+- Orders peak on **Monday (15.5K)** and are lowest on **Saturday (10.4K, 33% lower)**, so weekend-only promotions could lift quiet days.
 
 ---
 
