@@ -14,9 +14,7 @@ Hey there 👋 ! I'm Steven I'm Steven, a career switcher learning data analytic
 
 **Target role:** Data Analyst / BI Analyst
 **Skills & tools:** Excel, Tableau, Data Visualization
-**Contact:** [www.linkedin.com/in/steven-bastian-peterson-532099378
-
-] · [stevenbastianpeterson@gmail.com]
+**Contact:** [www.linkedin.com/in/steven-bastian-peterson-532099378] · [stevenbastianpeterson@gmail.com]
 
 ---
 
@@ -46,9 +44,10 @@ Original file used: [`data/Olist_Dataset.xlsx`](data/Olist_Dataset.xlsx)
 | Sellers | 3,088 | City, state, coordinates |
 
 **Data checks and preparation**
-- `order_id` is unique in Orders; sheets are linked in Tableau by `order_id`, `customer_id`, and `seller_id`.
-- Missing dates (e.g. 2,841 orders without a customer delivery date) mostly belong to orders not yet delivered, so they are labelled "Not Delivered" instead of being dropped.
-- Known gaps: 750 orders have no payment record, and 218 orders point to a seller missing from the Sellers sheet.
+- 'order_id' is unique in Orders; sheets are linked in Tableau by order_id, customer_id, and seller_id.
+- Scope: delivered orders only. All dashboard figures filter on order_status = delivered (94,854 of 97,688 orders, 97%). Canceled, unavailable, and in-progress orders are excluded.
+- Some date fields are empty: 152 orders have no approval date, 1,694 no carrier date, and 2,841 no customer delivery date. Nearly all of them are orders that were never delivered (shipped, canceled, unavailable, etc.), so the delivered-only filter removes them. Eight delivered orders have no delivery date and are left out of the average delivery time.
+- Known gaps in the workbook: 750 orders have no payment record, and 218 orders point to a seller missing from the Sellers sheet.
 - Analysis window is Jan 2017 – Aug 2018. Only 19 orders fall after Aug 2018, so they are excluded.
 
 **Key metrics (calculated fields in Tableau)**
@@ -71,26 +70,26 @@ Delivery is reliable: only 6.8% of delivered orders arrived after the estimated 
 ## 4. Key Insights & Recommendations
 
 ### 🔥 1. Black Friday is the biggest sales spike
-Nov 2017 revenue hit **R$1.16M, 55% above Oct 2017**, and 24 Nov alone brought 1,157 orders. December fell back to R$0.85M.
+Nov 2017 revenue hit R$1.14M, 55% above Oct 2017, and 24 Nov alone brought 1,139 orders (the November daily average was about 240). December fell back to R$0.83M.
 **Recommendation:** Plan stock and marketing budget around November well in advance, and test early-bird campaigns to spread the peak.
 
 ![Monthly Sales Trend](images/monthly-sales.png)
 
 ### 📍 2. Sales are concentrated in São Paulo
-São Paulo contributes **37.4% of revenue**; SP, RJ and MG together make up **62.5%**.
+São Paulo contributes **37.5% of revenue**; SP, RJ and MG together make up **62.5%**.
 **Recommendation:** Protect the core market, and pilot targeted promotions in lower-volume states to reduce dependence on one region.
 
 ![Sales by State](images/sales-by-state.png)
 
 ### 💳 3. More installments, higher order value
-Average payment value rises from **R$112 (1 installment) to R$413 (10 installments)**. Customers appear to use installments for high-ticket purchases (correlation, not proven cause).
+Average payment value rises from **R$112 (1 installment) to R$410 (10 installments)**. Customers appear to use installments for high-ticket purchases (correlation, not proven cause).
 **Recommendation:** Promote installment options on high-value products and bundles.
 
 ![AOV by Installments](images/aov-installments.png)
 
 ### Supporting observations
-- **Health & Beauty** is the top category by revenue (about R$1.44M).
-- Orders peak on **Monday (~15.9K)** and are lowest on **Saturday (~10.7K, 33% lower)**, so weekend-only promotions could lift quiet days.
+- **Health & Beauty** is the top category by revenue (about R$1.41M).
+- Orders peak on **Monday (~15.5K)** and are lowest on **Saturday (~10.4K, 33% lower)**, so weekend-only promotions could lift quiet days.
 
 ---
 
