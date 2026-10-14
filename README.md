@@ -32,7 +32,7 @@ Olist is a marketplace connecting small sellers with customers across Brazil. Ma
 
 ## 2. Data
 
-Source: [Olist Brazilian E-Commerce Public Dataset (Kaggle)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) — [I selected and combined the original tables into one Excel workbook with four sheets (Orders, Order_Payments, Customers, Sellers). I added the seller and product category to Orders, added price and freight value to Order_Payments, and added latitude and longitude to Customers and Sellers. Product category names were kept in Portuguese.].
+Source: [Olist Brazilian E-Commerce Public Dataset (Kaggle)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) — I selected and combined the original tables into one Excel workbook with four sheets (Orders, Order_Payments, Customers, Sellers). I added the seller and product category to Orders, added price and freight value to Order_Payments, and added latitude and longitude to Customers and Sellers. Product category names were kept in Portuguese.
 
 Original file used: [`data/Olist_Dataset.xlsx`](data/Olist_Dataset.xlsx)
 
@@ -44,7 +44,7 @@ Original file used: [`data/Olist_Dataset.xlsx`](data/Olist_Dataset.xlsx)
 | Sellers | 3,088 | City, state, coordinates |
 
 **Data checks and preparation**
-- 'order_id' is unique in Orders; sheets are linked in Tableau by order_id, customer_id, and seller_id.
+- 'order_id' is unique in Orders, sheets are linked in Tableau by order_id, customer_id, and seller_id.
 - Scope: delivered orders only. All dashboard figures filter on order_status = delivered (94,854 of 97,688 orders, 97%). Canceled, unavailable, and in-progress orders are excluded.
 - Some date fields are empty: 152 orders have no approval date, 1,694 no carrier date, and 2,841 no customer delivery date. Nearly all of them are orders that were never delivered (shipped, canceled, unavailable, etc.), so the delivered-only filter removes them. Eight delivered orders have no delivery date and are left out of the average delivery time.
 - Known gaps in the workbook: 750 orders have no payment record, and 218 orders point to a seller missing from the Sellers sheet.
