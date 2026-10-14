@@ -10,10 +10,10 @@
 
 ## 👋 About Me
 
-Hey there 👋 ! I'm Steven and this repository houses my profile description.
+Hey there 👋 ! I'm Steven I'm Steven, a career switcher learning data analytics through Dibimbing Bootcamp. I enjoy turning raw data into clear business recommendations, and I'm looking for opportunities as a Data Analyst / BI Analyst
 
 **Target role:** Data Analyst / BI Analyst
-**Skills & tools:** Excel, Tableau, SQL, Data Visualization
+**Skills & tools:** Excel, Tableau, Data Visualization
 **Contact:** [www.linkedin.com/in/steven-bastian-peterson-532099378
 
 ] · [stevenbastianpeterson@gmail.com]
@@ -34,7 +34,7 @@ Olist is a marketplace connecting small sellers with customers across Brazil. Ma
 
 ## 2. Data
 
-Source: [Olist Brazilian E-Commerce Public Dataset (Kaggle)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) — [ISI: jelaskan singkat bagaimana kamu menyiapkan file Excel ini dari data Kaggle].
+Source: [Olist Brazilian E-Commerce Public Dataset (Kaggle)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) — [I selected and combined the original tables into one Excel workbook with four sheets (Orders, Order_Payments, Customers, Sellers). I added the seller and product category to Orders, added price and freight value to Order_Payments, and added latitude and longitude to Customers and Sellers. Product category names were kept in Portuguese.].
 
 Original file used: [`data/Olist_Dataset.xlsx`](data/Olist_Dataset.xlsx)
 
@@ -49,7 +49,6 @@ Original file used: [`data/Olist_Dataset.xlsx`](data/Olist_Dataset.xlsx)
 - `order_id` is unique in Orders; sheets are linked in Tableau by `order_id`, `customer_id`, and `seller_id`.
 - Missing dates (e.g. 2,841 orders without a customer delivery date) mostly belong to orders not yet delivered, so they are labelled "Not Delivered" instead of being dropped.
 - Known gaps: 750 orders have no payment record, and 218 orders point to a seller missing from the Sellers sheet.
-- Product categories are in Portuguese (e.g. `beleza_saude` = Health & Beauty) and were renamed for readability.
 - Analysis window is Jan 2017 – Aug 2018. Only 19 orders fall after Aug 2018, so they are excluded.
 
 **Key metrics (calculated fields in Tableau)**
@@ -63,7 +62,7 @@ Original file used: [`data/Olist_Dataset.xlsx`](data/Olist_Dataset.xlsx)
 
 | Revenue | Orders | AOV | Avg. delivery vs estimate |
 |---|---|---|---|
-| R$15.6M | 96.9K | R$160.7 | 11.8 days earlier |
+| R$15M | 94K | R$160.7 | 11.8 days earlier |
 
 Delivery is reliable: only 6.8% of delivered orders arrived after the estimated date.
 
@@ -102,11 +101,8 @@ Average payment value rises from **R$112 (1 installment) to R$413 (10 installmen
 ---
 
 ## 6. Repository Structure
-```
 ├── README.md
 ├── data/
 │   └── Olist_Dataset.xlsx      # original data used
-├── dashboard/
-│   └── Olist_E-Commerce_Project.twbx
 └── images/                     # dashboard screenshots
 ```
